@@ -1,24 +1,26 @@
-Writeup: Action Packed
+# Writeup: Action Packed
 
-1. Analysis & Exploitation Process (Recon & Exploitation)
+## 1. Analysis & Exploitation Process (Recon & Exploitation)
 
-Step 1: Interface Reconnaissance
+### Step 1: Interface Reconnaissance
 After accessing the challenge link, we are presented with a basic web interface as shown below:
 
-Profile Settings: Allows updating or modifying profile information.
-API Access: Functions related to generating or verifying tokens.
+* **Profile Settings:** Allows updating or modifying profile information.
+* **API Access:** Functions related to generating or verifying tokens.
 
-We proceed by testing a few basic features on this web interface, while simultaneously using Burp Suite to intercept the traffic and analyze the structure of the transmitted network packets (HTTP requests/responses).
+We proceed by testing a few basic features on this web interface, while simultaneously using **Burp Suite** to intercept the traffic and analyze the structure of the transmitted network packets (HTTP requests/responses).
 
 ---
 
-Step 2: Intercepting Packets & Finding the Flag
-By closely inspecting the `POST` request sent from the Token Generation (Generate Token / API Access) feature, we observe the server's response inside Burp Suite.
+### Step 2: Intercepting Packets & Finding the Flag
+By closely inspecting the `POST` request sent from the **Token Generation (Generate Token / API Access)** feature, we observe the server's response inside Burp Suite.
 
 As a result, the system discloses the flag directly within this response packet.
 
 ---
 
-2. Flag Captured
+## 2. Flag Captured
 From the analysis of the intercepted `POST` response, we successfully retrieved the complete flag:
+
+```text
 0xV01D{ca45b212-1551-427d-90a6-98d88a4cd027}
