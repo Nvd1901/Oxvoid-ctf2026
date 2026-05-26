@@ -113,4 +113,4 @@ The server leaks the flag directly inside the JSON response body — a field tha
 
 ---
 
-*Writeup by [your-handle] · CTF: [competition-name] · Date: 2026-05-26*
+*Writeup by [nvd] · CTF: [OXvoid-ctf] · Date: 2026-05-26*
