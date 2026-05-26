@@ -190,4 +190,4 @@ query {
 
 ---
 
-*Writeup by [your-handle] · CTF: [competition-name] · Date: 2026-05-26*
+*Writeup by [nvd · CTF: [Oxvoid-ctf] · Date: 2026-05-26*
