@@ -1,0 +1,30 @@
+# Writeup: Action Packed (100 điểm)
+
+
+
+ 2. Quá trình Phân tích & Khai thác (Recon & Exploitation)
+
+ Bước 1: Khảo sát giao diện
+Sau khi truy cập vào đường link thử thách, chúng ta sẽ thấy một giao diện web cơ bản như hình dưới:
+
+* **Profile Settings:** Cho phép cập nhật hoặc thay đổi thông tin hồ sơ.
+* **API Access:** Chức năng liên quan đến việc cấp phát hoặc kiểm tra Token.
+
+Chúng ta tiến hành thử nghiệm vài chức năng cơ bản trên giao diện web này, đồng thời bật **Burp Suite** lên để bắt và quan sát cấu trúc của các gói tin (HTTP requests/responses) được gửi đi.
+
+
+
+### Bước 2: Bắt gói tin và Tìm Flag
+Khi kiểm tra kỹ gói tin `POST` được gửi đi từ chức năng **tạo Token (Generate Token / API Access)**, chúng ta quan sát phần phản hồi (Response) trả về từ server trong Burp Suite.
+
+Kết quả là hệ thống đã trả về flag trực tiếp trong gói tin phản hồi này.
+
+![Burp Suite Response](https://raw.githubusercontent.com/<username>/<repo>/main/path/to/image3.jpg)
+
+---
+
+## 3. Flag thu được
+Từ kết quả kiểm tra gói tin `POST`, ta tìm được chuỗi flag hoàn chỉnh:
+
+```text
+0xV01D{ca45b212-1551-427d-90a6-98d88a4cd027}
